@@ -31,6 +31,10 @@ const person = {
     age: 00,
 };
 
+person.eyeColor = "black";
+
+delete person.age;
+
 let txt = "";
 for (let x in person) {
     txt += person[x] + " ";
@@ -38,15 +42,32 @@ for (let x in person) {
 
 console.log(txt);
 
-const car = {
+const cars = {
     name: "volvo",
     weight: 100,
     color: "black",
 };
 
 let text = "";
-for (let x in car) {
-    text += car[x] + " ";
+for (let x in cars) {
+    text += cars[x] + " ";
 }
 
-console.log(text);
+cars.nationality = "Bangladesh";
+
+console.log(cars);
+
+const cars = {
+    name: "volvo",
+    weight: 100,
+    color: "black",
+};
+
+// let text = "";
+// for (let x in cars) {
+//     text += cars[x] + " ";
+// }
+
+cars.nationality = "Bangladesh";
+
+console.log(cars);
