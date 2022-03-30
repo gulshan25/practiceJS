@@ -32,8 +32,12 @@ const person = {
 };
 
 person.eyeColor = "black";
+person.nickname = "Tanny";
+
+console.log(person.fname);
 
 delete person.age;
+delete person["age"];
 
 let txt = "";
 for (let x in person) {
@@ -41,6 +45,8 @@ for (let x in person) {
 }
 
 console.log(txt);
+
+console.log(typeof person.fname);
 
 const cars = {
     name: "volvo",
@@ -71,3 +77,17 @@ const cars = {
 cars.nationality = "Bangladesh";
 
 console.log(cars);
+
+const myObj = {
+    name: "john",
+    age: 30,
+    cars: {
+        car1: "ford",
+        car2: "bmw",
+        car3: "fiat",
+    },
+};
+
+console.log(myObj);
+console.log(myObj.cars);
+console.log(myObj.cars.car3);
