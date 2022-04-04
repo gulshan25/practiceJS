@@ -1,3 +1,34 @@
+console.log(document.getElementById("pra"));
+console.dir(document.getElementById("pra"));
+
+("use strict");
+
+// const p = document.getElementById("pra");
+// p.innerHTML = "Hello World!";
+
+// const p = document.querySelector("#demo");
+
+// p.style.color = "red";
+// p.style.fontSize = "50px";
+
+setTimeout(function() {
+    const p = document.querySelector("#demo");
+
+    p.style.color = "red";
+    p.style.fontSize = "50px";
+}, 2000);
+
+document.getElementsByClassName("prag").innerHTML = "Good Morning";
+document.getElementsByTagName("header").innerHTML = "Good Morning";
+document.querySelector("#demo");
+document.querySelectorAll("#demo");
+
+// const element = document.getElementById("myImage");
+// element.src = "text.jpg";
+
+const element = document.getElementById("demo");
+element.innerHTML = Date();
+
 let a, b, c;
 a = 5;
 b = 6;
@@ -28,7 +59,7 @@ console.log(immutableString);
 const person = {
     fname: "Gulshan",
     lname: "Rahman",
-    age: 00,
+    age: 200,
 };
 
 person.eyeColor = "black";
@@ -63,14 +94,14 @@ cars.nationality = "Bangladesh";
 
 console.log(cars);
 
-const cars = {
+const cName = {
     name: "volvo",
     weight: 100,
     color: "black",
 };
 
-console.log(Object.values(cars));
-console.log(JSON.stringify(cars));
+console.log(Object.values(cName));
+console.log(JSON.stringify(cName));
 
 // let text = "";
 // for (let x in cars) {
@@ -126,7 +157,7 @@ console.log(myObj["cars"]);
 console.log(myObj["cars"]["car2"]);
 console.log(Object.values(cars));
 
-const person = {
+const person7 = {
     firstName: "John",
     lastName: "Doe",
     language: "en",
@@ -135,9 +166,9 @@ const person = {
     },
 };
 
-console.log(person.fullName);
+console.log(person7.fullName);
 
-const person = {
+const teacher = {
     firstName: "John",
     lastName: "Doe",
     language: "",
@@ -148,7 +179,7 @@ const person = {
 
 person.lang = "bn";
 
-console.log(person);
+console.log(teacher);
 
 const person1 = {
     firstName: "John",
@@ -211,3 +242,58 @@ console.log(fruits);
 (function() {
     console.log("I am a");
 })(); // self invoking function. invoking and calling same. // (); = IIFE - immediately invoked function expression.
+
+// errors
+
+const j = (x, y) => x + y;
+
+const i = function(a, b) {
+    console.log(arguments);
+    return a * b;
+};
+
+const n = function(a, b) {
+    console.log(arguments.length);
+    return a * b;
+};
+
+const d = function(a, b) {
+    console.log(arguments[0]);
+    return a * b;
+};
+
+const names = {
+    fullName: function(age, eyeColor) {
+        return this.firstName + " " + this.lastName + age + eyeColor;
+    },
+};
+
+const men = {
+    firstName: "John",
+    lastName: "Smith",
+};
+
+const women = {
+    firstName: "Mary",
+    lastName: "Smith",
+};
+
+console.log(names.fullName.call(men, women, 20, "black"));
+
+const names = {
+    fullName: function(age, eyeColor) {
+        return this.firstName + " " + this.lastName + age + eyeColor;
+    },
+};
+
+const men = {
+    firstName: "John",
+    lastName: "Smith",
+};
+
+const women = {
+    firstName: "Mary",
+    lastName: "Smith",
+};
+
+console.log(names.fullName.apply(women, [20, "black"]));
