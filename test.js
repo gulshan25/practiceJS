@@ -18,6 +18,21 @@ setTimeout(function() {
     p.style.fontSize = "50px";
 }, 2000);
 
+const para = document.createElement("p");
+const node = document.createTextNode("He he he ");
+
+para.appendChild(node); // <p>hehehe</p>
+
+const element = document.getElementById("demo");
+element.appendChild(para);
+
+function styling() {
+    const p = document.querySelector("#pra");
+
+    p.style.color = "red";
+    p.style.fontSize = "50px";
+}
+
 document.getElementsByClassName("prag").innerHTML = "Good Morning";
 document.getElementsByTagName("header").innerHTML = "Good Morning";
 document.querySelector("#demo");
